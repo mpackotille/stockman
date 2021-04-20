@@ -10,12 +10,13 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-use App\Article;
 use App\Http\Controllers\ArticleController;
+use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
+Route::get('/articles', function () {
     return view('welcome');
 });
 
-Route::get('/articles/list', [ArticleController::class,'list']);
+Route::resource('articles', 'ArticleController');
+
+
