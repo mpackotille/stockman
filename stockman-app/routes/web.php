@@ -11,11 +11,11 @@
 |
 */
 
+use App\Article;
+use App\Http\Controllers\ArticleController;
+
 Route::get('/', function () {
     return view('welcome');
 });
 
-
-Route::get('/articles/list', function () {
-    return view('articles.list');
-});
+Route::get('/articles/list', [ArticleController::class,'list']);
