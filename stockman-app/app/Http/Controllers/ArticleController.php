@@ -26,7 +26,7 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        //
+        return view('articles.create');
     }
 
     /**
@@ -37,6 +37,11 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
+        $article=new Article;
+        $article->NOM=$request->nom;
+        $article->QTE=$request->qte;
+        $article->save();
+        return redirect('articles');
         //
     }
 
