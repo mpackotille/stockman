@@ -6,7 +6,7 @@
        <!-- <tr><td>1</td><td>Sucre</td><td>10</td></tr>
         <tr><td>2</td><td>Sel</td><td>20</td></tr> -->
         @foreach ($articles as $article)
-        <tr><td>{{$article->getId()}}</td><td>{{$article->getNom()}}</td><td>{{$article->getQte()}}</td></tr> 
+        <tr><td>{{$article->ID}}</td><td>{{$article->NOM}}</td><td>{{$article->QTE}}</td></tr> 
         @endforeach 
     </table>
 </body>
